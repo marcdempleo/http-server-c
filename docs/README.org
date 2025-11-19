@@ -1,3 +1,6 @@
 #+title: docs
 
 you shouldn't have expected anything.
+
+the [[./blog.org][blog]] is just for keeping track of my (in)sanity. i'll probably remove it
+soon.
