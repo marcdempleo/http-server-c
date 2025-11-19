@@ -1,0 +1,17 @@
+#+title: HTTP Server C
+
+i got REALLY bored of studying c, and so i've decided to do something simple (i
+think?)
+
+* quick TODO list
+- [X]  send/receive data through sockets
+- [X] send valid http response
+- [ ] create c file for creating server/socket
+- [ ] parse http requests
+- [ ] serve static files
+- [ ] profit
+
+* ref.
+ * https://github.com/efraimG21/Simple-HTTP-Server-C/tree/main
+ * https://www.geeksforgeeks.org/c/socket-programming-cc/
+ * https://cppcheatsheet.com/notes/c_make.html#build-subdir-and-link-together

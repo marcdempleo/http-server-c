@@ -1,0 +1,17 @@
+#+title: blog
+
+just my thoughts during the project.
+
+* Nov. 17 2025
+i have no idea how to start this, but lets have a try now shall we? i also don't
+really know how to write CMakeList.txt or a Makefile...
+
+* Nov. 19 2025
+makefiles are... something. i can't even parse requests :sob:. It'll get better
+soon, i hope..
+
+IT FUCKING WORKS I KNOW I STOLE A LOT OF THIS FROM ANOTHER REPO BUT LIKE I DON"T
+GIVE A SHIT AHAHAHAHAHAHAHAHHAHAHA (i did a HTTP/1.1 200 OK response..) NOW ALL
+I NEED TO DO IS DISPLAY HTML, CSS AND JS FILES LMAOOO
+
+(oh how wrong he was...)
