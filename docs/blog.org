@@ -2,11 +2,11 @@
 
 just my thoughts during the project.
 
-*** Nov. 17 2025
+** Nov. 17 2025
 i have no idea how to start this, but lets have a try now shall we? i also don't
 really know how to write CMakeList.txt or a Makefile...
 
-*** Nov. 19 2025
+** Nov. 19 2025
 makefiles are... something. i can't even parse requests :sob:. It'll get better
 soon, i hope..
 
