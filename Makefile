@@ -13,14 +13,14 @@ SRCS = $(shell find $(SRC_DIR) -name '*.c')
 OBJS = $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS = $(OBJS:.o=.d)
 
-INC_DIRS = $(shell find $(SRC_DIRS) -type d)
+INC_DIRS = $(shell find $(SRC_DIR) -type d)
 INC_FLAGS = $(addprefix -I,$(INC_DIRS))
 
 CC = gcc
 CFLAGS += -Wall -Wextra $(INC_FLAGS) -MMD -MD
 
 $(BUILD_DIR)/$(EXE): $(OBJS)
-	$(CXX) $(OBJS) -o $@ $(LDFLAGS)
+	$(CC) $(OBJS) -o $@
 
 # Build step for C source
 $(BUILD_DIR)/%.c.o: %.c

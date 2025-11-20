@@ -14,20 +14,19 @@
 #define BUFFER_SIZE 4096
 
 int main(void) {
-    int socket_fd, connect_fd;
+    int connect_fd;
+    acceptfd_t *connect_info;
     server_t server;
     char buf[BUFFER_SIZE];
 
+    // TODO: make all of this be changeable through program args
     server.address = IP_ADDR;
     server.domain = AF_INET;
     server.port = PORT;
     server.sock_type = SOCK_STREAM;
     server.backlog = BACKLOG_NUM;
 
-    if (init_server(&server, &connect_fd) == -1) {
-        printf("shit");
-        _exit(-1);
-    }
+    init_server(server, connect_info);
 
     // http response
     char *hello = "HTTP/1.1 200 OK\n"
@@ -35,20 +34,24 @@ int main(void) {
 
     // event loop
     while (1) {
-        printf("waiting...\n");
+        printf("\n--- event loop start ---\n");
+
+        connect_fd = accept(connect_info->socket_fd,
+                            (struct sockaddr *)&connect_info->sockaddr,
+                            &connect_info->sockaddr_len);
+
         if (connect_fd == -1)
             perror("cry");
 
         if (read(connect_fd, buf, BUFFER_SIZE) == -1) {
             perror("what??");
-            _exit(-1);
         }
 
         // just for logging yknow
-        printf("%s\n", buf);
+        printf("%s", buf);
 
         // just for logging yknow pt. 2
-        printf("%s\n", hello);
+        printf("%s", hello);
 
         if (write(connect_fd, hello, strlen(hello)) == -1) {
             perror("whoops!");
@@ -64,6 +67,7 @@ int main(void) {
             perror("that's bad...");
             return -1;
         }
+        printf("\n--- event loop end ---\n");
     }
 
     return 0;
