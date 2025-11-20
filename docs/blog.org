@@ -1,12 +1,13 @@
 #+title: blog
 
-just my thoughts during the project.
+just my thoughts during the project. don't take anything /too/ seriously.
 
-** Nov. 17 2025
+** on-the-day entries
+*** Nov. 17 2025
 i have no idea how to start this, but lets have a try now shall we? i also don't
 really know how to write CMakeList.txt or a Makefile...
 
-** Nov. 19 2025
+*** Nov. 19 2025
 makefiles are... something. i can't even parse requests :sob:. It'll get better
 soon, i hope..
 
@@ -14,4 +15,24 @@ IT FUCKING WORKS I KNOW I STOLE A LOT OF THIS FROM ANOTHER REPO BUT LIKE I DON"T
 GIVE A SHIT AHAHAHAHAHAHAHAHHAHAHA (i did a HTTP/1.1 200 OK response..) NOW ALL
 I NEED TO DO IS DISPLAY HTML, CSS AND JS FILES LMAOOO
 
-(oh how wrong he was...)
+(oh how naive he was...)
+
+** random entries
+*** ai
+i'm planning not to use AI up until:
+a) i get my PhD in CompSci, or
+b) i write an LLM in C (probably gonna be my third project, after playing around
+   with my ESP32 board)
+
+i don't even know how hard (or easy?) writing an LLM will be in C, since i've
+heard that you should use python and only python. but that's the fun in it.
+
+also i just don't have a good view on gen-ai. so even if i am able to use ai i
+probably won't.. mostly since it kinda ruins the fun for me. the only reason why
+i count this as my first project is all the other times i had used ChatGPT (and
+python but that doesn't matter), and i just made it do all the work for me since
+i didn't know how to start.
+
+after LLM in C, i'll probably either move on into kernel modules or look
+into a different language. who knows.
+-----
