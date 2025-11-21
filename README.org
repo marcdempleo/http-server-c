@@ -6,7 +6,8 @@ think?)
 * quick TODO list
 - [X]  send/receive data through sockets
 - [X] send valid http response
-- [ ] create c file for creating server/socket
+- [X] create c file for creating server/socket
+- [ ] allow changes in server config with cli args.
 - [ ] parse http requests
 - [ ] serve static files
 - [ ] profit
