@@ -7,9 +7,11 @@ think?)
 - [X]  send/receive data through sockets
 - [X] send valid http response
 - [X] create c file for creating server/socket
-- [ ] allow changes in server config with cli args.
 - [ ] parse http requests
+  - [ ] figure out http code & handle it
 - [ ] serve static files
+- [ ] allow changes in server config with cli args.
+- [ ] check if build could compile through github actions
 - [ ] profit
 
 * ref.

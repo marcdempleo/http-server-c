@@ -15,7 +15,7 @@
 
 int main(void) {
     int connect_fd;
-    acceptfd_t *connect_info;
+    acceptfd_t connect_info;
     server_t server;
     char buf[BUFFER_SIZE];
 
@@ -26,19 +26,21 @@ int main(void) {
     server.sock_type = SOCK_STREAM;
     server.backlog = BACKLOG_NUM;
 
-    init_server(server, connect_info);
+    init_server(server, &connect_info);
 
     // http response
     char *hello = "HTTP/1.1 200 OK\n"
                   "server: a shitty one\n";
 
+    /* char delimiter[] = " "; */
+    /* char *token; */
     // event loop
     while (1) {
         printf("\n--- event loop start ---\n");
 
-        connect_fd = accept(connect_info->socket_fd,
-                            (struct sockaddr *)&connect_info->sockaddr,
-                            &connect_info->sockaddr_len);
+        connect_fd = accept(connect_info.socket_fd,
+                            (struct sockaddr *)&connect_info.sockaddr,
+                            &connect_info.sockaddr_len);
 
         if (connect_fd == -1)
             perror("cry");
@@ -50,16 +52,23 @@ int main(void) {
         // just for logging yknow
         printf("%s", buf);
 
+        /* token = strtok(buf, delimiter); */
+
+        /* while (token != NULL) { */
+        /*     printf("%s", token); */
+        /*     token = strtok(NULL, delimiter); */
+        /* } */
+
+        /* if (http_request(buf) == -1) { */
+        /*     perror("crap.."); */
+        /*     return -1; */
+        /* } */
+
         // just for logging yknow pt. 2
         printf("%s", hello);
 
         if (write(connect_fd, hello, strlen(hello)) == -1) {
             perror("whoops!");
-            return -1;
-        }
-
-        if (http_request(buf) == -1) {
-            perror("crap..");
             return -1;
         }
 

@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <sys/socket.h>
 
-typedef struct server_desc {
+typedef struct {
     int domain;
     int sock_type;
     uint16_t port;
@@ -12,7 +12,7 @@ typedef struct server_desc {
     int backlog;
 } server_t;
 
-typedef struct connect_info {
+typedef struct {
     int socket_fd;
     struct sockaddr_in sockaddr;
     socklen_t sockaddr_len;

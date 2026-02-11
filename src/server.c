@@ -38,7 +38,7 @@ int init_server(server_t server, acceptfd_t *connect_info) {
     sock_addr_size = sizeof(sock_addr);
     connect_info->socket_fd = socket_fd;
     connect_info->sockaddr = sock_addr;
-    connect_info->sockaddr_len = sock_addr_size;
+    connect_info->sockaddr_len = sizeof(sock_addr);
     printf("connect_info init complete\n");
     printf("--- server init completed ---\n");
     return 0;
